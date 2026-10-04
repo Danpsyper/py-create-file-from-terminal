@@ -42,8 +42,8 @@ if "-f" in command and "-d" in command:
 
 elif command_tag == "-d":
     names = []
-    for i in range(len(command) - 2):
-        names.append(command[i + 2])
+    for i in range(2, len(command)):
+        names.append(command[i])
 
     full_dir_path = os.path.join(*names)
     os.makedirs(full_dir_path, exist_ok=True)
